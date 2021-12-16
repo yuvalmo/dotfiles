@@ -9,10 +9,6 @@ tools:
 - [ ] fzf + aliases
 - [ ] bat
 
-# git
-- [ ] aliases
-- [ ] edit with vim
-
 # vim
 see notion page.
 

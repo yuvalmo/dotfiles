@@ -5,3 +5,5 @@
 	st = status
 	please = push --force-with-lease
 	last = log -1
+[core]
+	editor = vim
