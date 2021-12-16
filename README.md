@@ -5,7 +5,6 @@ A place to keep my dotfiles.
 - [ ] git prompt
 
 tools:
-- [ ] rg
 - [ ] fzf + aliases
 - [ ] bat
 
@@ -14,4 +13,3 @@ see notion page.
 
 # easy install
 - [ ] install packages.
-- [ ] install using symlinks.
