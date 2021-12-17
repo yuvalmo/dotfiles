@@ -40,4 +40,9 @@ lnk $dotfiles/vim/vimrc ~/.vimrc
 lnk $dotfiles/vim/vim   ~/.vim
 
 echo ""
+echo "Installing vim plugins."
+
+vim +PlugInstall +qall
+
+echo ""
 echo "Done."
