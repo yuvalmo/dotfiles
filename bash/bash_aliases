@@ -11,8 +11,6 @@ alias qqqqqq='cd ../../../../../..'
 CUR=$(realpath ${BASH_SOURCE[0]})
 DOT=$(realpath $(dirname $CUR)/..)
 
-echo $DOT
-
 # Touch
 alias shtouch="cp $DOT/templates/tmpl.sh"
 alias pytouch="cp $DOT/templates/tmpl.py"
