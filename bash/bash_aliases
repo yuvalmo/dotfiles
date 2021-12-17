@@ -16,3 +16,6 @@ alias pytouch="cp $DOT/templates/tmpl.py"
 alias ctouch="cp $DOT/templates/tmpl.cpp"
 
 unset DOT
+
+# bat
+alias bat='batcat'

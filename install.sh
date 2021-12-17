@@ -11,9 +11,16 @@ function lnk() {
 
 # apt
 sudo apt update && sudo apt install -y \
+    ccls \
     fzf \
     ripgrep \
     xclip
+
+# bat requires a special installation because of a
+# bug when installed alongside ripgrep, both being
+# rust-based packages.
+sudo apt install -o Dpkg::Options::="--force-overwrite" \
+    bat
 
 path=$(realpath $0)
 dotfiles=$(dirname $path)
