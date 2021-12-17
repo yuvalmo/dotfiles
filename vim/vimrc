@@ -1,0 +1,46 @@
+call plug#begin('~/.vim/plugged')
+
+" Basics
+Plug 'tpope/vim-sensible'
+
+" Looks
+Plug 'morhetz/gruvbox'
+
+call plug#end()
+
+" Basics:
+" Set line numbers
+set number
+set relativenumber
+
+" Indentation
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set smartindent
+
+" Search settings
+set ignorecase
+set smartcase
+set hlsearch
+
+" Do not draw macros
+set lazyredraw
+
+" Do not save backups
+set nobackup
+set noswapfile
+set writebackup
+
+" Do not wrap long lines
+set nowrap
+
+" Gruvbox:
+" Set dark mode
+set background=dark
+
+" Show comments in italics, and set high contrast
+let g:gruvbox_italic  = 1
+let g:gruvbox_contrast_dark = 'hard'
+
+colorscheme gruvbox

@@ -37,7 +37,7 @@ lnk $dotfiles/gitconfig ~/.gitconfig
 
 # vim
 lnk $dotfiles/vim/vimrc ~/.vimrc
-# lnk $dotfiles/vim/vim   ~/.vim
+lnk $dotfiles/vim/vim   ~/.vim
 
 echo ""
 echo "Done."
