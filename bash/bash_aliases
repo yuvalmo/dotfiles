@@ -8,7 +8,10 @@ alias qqqq='cd ../../../..'
 alias qqqqq='cd ../../../../..'
 alias qqqqqq='cd ../../../../../..'
 
-DOT=$(realpath ..)
+CUR=$(realpath ${BASH_SOURCE[0]})
+DOT=$(realpath $(dirname $CUR)/..)
+
+echo $DOT
 
 # Touch
 alias shtouch="cp $DOT/templates/tmpl.sh"
