@@ -5,6 +5,25 @@ Plug 'tpope/vim-sensible'
 
 " Looks
 Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Editing
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-abolish'
+
+" Navigation
+Plug 'tpope/vim-unimpaired'
+
+" Find & Grep
+Plug 'jremmen/vim-ripgrep'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" Git
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -35,6 +54,15 @@ set writebackup
 " Do not wrap long lines
 set nowrap
 
+" Remember last position
+function s:lastpos()
+  if line("'\"") > 1 && line("'\"") <= line("$")
+    exe "normal! g'\""
+  endif
+endfunction
+
+autocmd BufReadPost * call s:lastpos()
+
 " Gruvbox:
 " Set dark mode
 set background=dark
@@ -44,3 +72,32 @@ let g:gruvbox_italic  = 1
 let g:gruvbox_contrast_dark = 'hard'
 
 colorscheme gruvbox
+
+" Airline:
+" Always show tab line
+let g:airline#extensions#tabline#enabled = 1
+
+" Disable separators because we don't have pretty fonts for them (yet)
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+
+" Markdown:
+" Syntax highlighting for code segments
+let g:markdown_fenced_languages = ['cpp', 'python', 'bash', 'sh', 'vim']
+
+" Grep:
+" Highlight matches
+let g:rg_highlight = 'true'
+
+" Mappings:
+let mapleader = ' '
+
+" Git
+nmap <leader>gs :Git<CR>
+nmap <leader>gb :Git blame<CR>
+
+" Find & Grep
+nmap <leader>g :Rg<space>
+nmap <leader>p :Files<CR>
+nmap <leader>b :Buffers<CR>
+nmap <leader>h :History<CR>
