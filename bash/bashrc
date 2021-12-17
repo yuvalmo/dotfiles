@@ -116,3 +116,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Enable fzf key bindings. Replaces ctrl+r, for example.
+if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
+    . /usr/share/doc/fzf/examples/key-bindings.bash
+fi
