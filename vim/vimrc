@@ -97,6 +97,12 @@ let g:gruvbox_contrast_dark = 'hard'
 
 colorscheme gruvbox
 
+" Cursor
+if &term =~ '^xterm'
+  let &t_EI .= "\<Esc>[2 q" " Normal mode - solid block
+  let &t_SI .= "\<Esc>[6 q" " Insert mode - solid vertical bar
+endif
+
 " Airline:
 " Always show tab line
 let g:airline#extensions#tabline#enabled = 1
