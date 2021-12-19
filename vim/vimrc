@@ -24,6 +24,7 @@ Plug 'junegunn/fzf.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 call plug#end()
 
@@ -111,6 +112,11 @@ let g:markdown_fenced_languages = ['cpp', 'python', 'bash', 'sh', 'vim']
 " Grep:
 " Highlight matches
 let g:rg_highlight = 'true'
+
+" Use correct browser on WSL
+if wsl#is_wsl()
+  let g:netrw_browsex_viewer = "cmd.exe /C start"
+endif
 
 " Mappings:
 let mapleader = ' '
