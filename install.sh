@@ -12,8 +12,12 @@ function lnk() {
 # apt
 sudo apt update && sudo apt install -y \
     ccls \
+    cmake \
+    entr \
     fzf \
+    ninja-build \
     ripgrep \
+    tree \
     xclip
 
 # bat requires a special installation because of a
