@@ -58,6 +58,9 @@ set writebackup
 " Do not wrap long lines
 set nowrap
 
+" No bells
+set belloff=all
+
 " Remember last position
 function s:lastpos()
   if line("'\"") > 1 && line("'\"") <= line("$")
